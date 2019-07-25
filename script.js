@@ -25,9 +25,15 @@ console.log(average(arr));
 
 // №3
 let arr2 = [1, 3, 5, 6, 7, 9];
-for (i = arr2.length - 1; i >= 0; i--) {
-    console.log(arr2[i] + ' ');
+function reverseArray(arr) {
+    for (let i = 0; i < arr.length / 2; i++) {
+        let temp = arr[i];
+        arr[i] = arr[arr.length - i - 1];
+        arr[arr.length - i - 1] = temp;
+    }
 }
+reverseArray(arr2);
+console.log(arr2);
 
 // №4
 let obj = { html: 'HTML', css: 'CSS', js: 'ECMA' };
@@ -40,22 +46,26 @@ let order = {
     'address': 'Grebinki St. 44, Poltava,36002, Ukraine',
     'totalprice': 830,
     'totalweight': 2700,
-    'purchased_goods': {
-        'cap': {
-            'price': 100,
-            'weight': 200
+    'purchased_goods': [
+        {
+            'type': 'cap',
+            'price': '100',
+            'weight': '200'
         },
-        'spoon': {
-            'price': 30,
-            'weight': 100
+        {
+            'type': 'spoon',
+            'price': '30',
+            'weight': '100'
         },
-        'pot': {
-            'price': 550,
-            'weight': 2000
+        {
+            'type': 'pot',
+            'price': '550',
+            'weight': '2000'
         },
-        'mud': {
-            'price': 550,
-            'weight': 400
+        {
+            'type': 'mud',
+            'price': '150',
+            'weight': '400'
         }
-    }
+    ]
 }
