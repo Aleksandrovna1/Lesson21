@@ -1,3 +1,5 @@
+'use strict';
+
 // №1
 let ar = ['Жираф', 'Собака', 'Кот'];
 function searchArrayWord(arr, word) {
@@ -37,35 +39,45 @@ console.log(arr2);
 
 // №4
 let obj = { html: 'HTML', css: 'CSS', js: 'ECMA' };
-console.log(Object.keys(obj));
+
+let newobj = [];
+
+function getKeys(keys) {
+    for (let key in keys) {
+        newobj.push(keys[key]);
+    }
+    return newobj;
+}
+
+console.log(getKeys(obj));
 
 // №5
 let order = {
     'name': 'Tetyana',
-    'phone': 380997185646,
+    'phone': '+380997185646',
     'address': 'Grebinki St. 44, Poltava,36002, Ukraine',
     'totalprice': 830,
     'totalweight': 2700,
     'purchased_goods': [
         {
-            'type': 'cap',
-            'price': '100',
-            'weight': '200'
+            'name': 'cap',
+            'price': 100,
+            'weight': 200
         },
         {
-            'type': 'spoon',
-            'price': '30',
-            'weight': '100'
+            'name': 'spoon',
+            'price': 30,
+            'weight': 100
         },
         {
-            'type': 'pot',
-            'price': '550',
-            'weight': '2000'
+            'name': 'pot',
+            'price': 550,
+            'weight': 2000
         },
         {
-            'type': 'mud',
-            'price': '150',
-            'weight': '400'
+            'name': 'mud',
+            'price': 150,
+            'weight': 400
         }
     ]
 }
